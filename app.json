@@ -1,0 +1,28 @@
+{
+  "name": "Cisterna API",
+  "description": "API para sistema de cisternas",
+  "repository": "https://github.com/kaan-0/cistapi",
+  "keywords": ["php", "laravel", "api"],
+  "scripts": {
+    "postdeploy": "php artisan migrate --force --seed"
+  },
+  "env": {
+    "APP_ENV": "production",
+    "APP_DEBUG": "false",
+    "APP_KEY": {
+      "description": "Application encryption key",
+      "generator": "secret"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ]
+}
